@@ -19,12 +19,12 @@ services:
         fromService:
           name: bot-redis
           property: connectionString
+  
+  - type: redis
+    name: bot-redis
+    plan: free
 
 databases:
   - name: bot-db
     plan: free
     databaseName: bot_db
-
-redis:
-  - name: bot-redis
-    plan: free
