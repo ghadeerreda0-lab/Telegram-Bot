@@ -8,21 +8,23 @@ services:
     startCommand: python main.py
     envVars:
       - key: BOT_TOKEN
-        syncValue: 8563127617:AAEqQh1bWM8k2gMFqmAWLUJvWTK3rFyp4k8
+        value: 8563127617:AAEqQh1bWM8k2gMFqmAWLUJvWTK3rFyp4k8
       - key: ADMIN_ID
-        syncValue: 814607765
+        value: 814607765
       - key: DATABASE_URL
         fromDatabase:
           name: bot-db
           property: connectionString
       - key: REDIS_URL
         fromService:
+          type: redis
           name: bot-redis
           property: connectionString
   
   - type: redis
     name: bot-redis
     plan: free
+    ipAllowList: []  # ⬅️ هذا يصلح الخطأ الرابع
 
 databases:
   - name: bot-db
