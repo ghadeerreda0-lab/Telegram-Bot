@@ -1,19 +1,19 @@
 import os
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "")
-ADMIN_ID = int(os.getenv("ADMIN_ID", 0))
+BOT_TOKEN = os.getenv("8563127617:AAEqQh1bWM8k2gMFqmAWLUJvWTK3rFyp4k8", "")
+ADMIN_ID = int(os.getenv("8146077656", 0))
 
 # إعدادات قاعدة البيانات
 DATABASE_URL = os.getenv("DATABASE_URL", "")
 REDIS_URL = os.getenv("REDIS_URL", "")
 
 # القنوات
-CHANNEL_SYR_CASH = os.getenv("CHANNEL_SYR_CASH", "")
-CHANNEL_SCH_CASH = os.getenv("CHANNEL_SCH_CASH", "")
-CHANNEL_ADMIN_LOGS = os.getenv("CHANNEL_ADMIN_LOGS", "")
-CHANNEL_WITHDRAW = os.getenv("CHANNEL_WITHDRAW", "")
+CHANNEL_SYR_CASH = os.getenv("CHANNEL_SYR_CASH", " -1003597919374")
+CHANNEL_SCH_CASH = os.getenv("CHANNEL_SCH_CASH", "-1003464319533")
+CHANNEL_ADMIN_LOGS = os.getenv("CHANNEL_ADMIN_LOGS", " -1003577468648")
+CHANNEL_WITHDRAW = os.getenv("CHANNEL_WITHDRAW", "-1003443113179")
 CHANNEL_STATS = os.getenv("CHANNEL_STATS", "")
-CHANNEL_SUPPORT = os.getenv("CHANNEL_SUPPORT", "")
+CHANNEL_SUPPORT = os.getenv("CHANNEL_SUPPORT", "-1003514396473")
 
 # إعدادات الأداء
 REDIS_CACHE_TTL = 3600
