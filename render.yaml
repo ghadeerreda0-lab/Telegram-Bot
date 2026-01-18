@@ -2,12 +2,16 @@ services:
   - type: web
     name: telegram-bot
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: |
+      pip install -r requirements.txt
+      playwright install chromium
     startCommand: python main.py
     envVars:
-      - key: 8563127617:AAEqQh1bWM8k2gMFqmAWLUJvWTK3rFyp4k8
+      - key: BOT_TOKEN
+        value: 8563127617:AAEqQh1bWM8k2gMFqmAWLUJvWTK3rFyp4k8
         sync: false
-      - key: 8146077656
+      - key: ADMIN_ID
+        value: 814607765
         sync: false
       - key: DATABASE_URL
         fromDatabase:
@@ -21,8 +25,8 @@ services:
 
 databases:
   - name: bot-db
+    plan: free
     databaseName: bot_db
-    user: bot_user
 
 redis:
   - name: bot-redis
